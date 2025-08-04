@@ -1,0 +1,428 @@
+html,
+body {
+    height: 96%;
+}
+
+body {
+    font-family: -apple-system, 'Inter', 'Open Sans', sans-serif;
+    padding-top: 3.5ex;
+    overflow-x: hidden;
+    background-color: #579d34;
+    color: #222;
+}
+
+div.topbar {
+    background-color: #111111;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-bottom: 0.8ex;
+    height: 5ex;
+    z-index: 10;
+}
+
+div.topbutton {
+    display: inline-block;
+    padding: 0.5em 0.65em 0.7em 0.65em;
+    color: #999;
+    font-size: large;
+}
+
+div.selected_tab {
+    color: #15b1e7;
+}
+
+h2 {
+    font-size: large;
+    color: white;
+}
+
+div.clock {
+    float: right;
+    color: white;
+}
+
+div#container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 100%;
+}
+
+div#shop_window {
+    flex-grow: 1;
+    background-color: #eee;
+    margin-right: 1ex;
+    border-radius: 1ex;
+    display: flex;
+    padding: 10px;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    gap: 10px;
+    width: 73%;
+}
+
+#shop_window .item {
+    width: 137px;
+    height: 107px;
+    background-color: #ddd;
+    border-radius: 1ex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    position: relative;
+    text-align: center;
+}
+
+#shop_window .cash_in {
+    border-bottom: 5px solid #579d34;
+}
+
+#shop_window .cash_out {
+    border-bottom: 5px solid crimson;
+}
+
+#shop_window .drinks {
+    border-bottom: 5px solid cornflowerblue;
+}
+
+#shop_window .sweets {
+    border-bottom: 5px solid goldenrod;
+}
+
+#shop_window .chocolate {
+    border-bottom: 5px solid chocolate;
+}
+
+#shop_window .ice_cream {
+    border-bottom: 5px solid fuchsia;
+}
+
+#shop_window .cake {
+    border-bottom: 5px solid darkgreen;
+}
+
+#shop_window .merch {
+    border-bottom: 5px solid black;
+}
+
+div.category_color {
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    margin-right: 1ex;
+    margin-bottom: -2pt;
+}
+
+td .drinks {
+    background-color: cornflowerblue;
+}
+
+td .sweets {
+    background-color: goldenrod;
+}
+
+td .chocolate {
+    background-color: chocolate;
+}
+
+#shop_window .item:hover {
+    background-color: #ccc;
+    cursor: pointer;
+    border-bottom: 5px solid black;
+}
+
+#shop_window .item .price {
+    /* font-variant-numeric: tabular-nums; */
+    position: absolute;
+    text-align: right;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+
+
+div#transaction {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 1ex;
+    padding: 1.5ex;
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+}
+
+div.text_and_money {
+    display: flex;
+    justify-content: right;
+    height: 80px;
+}
+
+div#customer_info {
+    border-bottom: 5px solid #eee;
+    margin-bottom: 10px;
+    height: 95px;
+}
+
+div#customer_info #name {
+    margin-right: 10px;
+}
+
+div.text_and_money div.name,
+div.text_and_money div.label {
+    width: 100%;
+    margin-top: 4px;
+    margin-right: 8px;
+}
+
+div.text_and_money div#name {
+    font-size: xx-large;
+    flex-grow: 1;
+}
+
+div#current_balance .label {
+    font-size: large;
+    text-align: right;
+}
+
+#money {
+    word-wrap: unset;
+}
+
+div.text_and_money div.label {
+    font-size: x-large;
+}
+
+div.text_and_money div.money {
+    font-size: xxx-large;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+span.pound_sign {
+    position: relative;
+    top: -1.3ex;
+    font-size: x-large;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+span.total_cr {
+    margin-left: 1px;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+div#receipt {
+    padding-bottom: 10px;
+    border-bottom: 5px solid #eee;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    font-family: Courier, monospace
+}
+
+div#receipt .item {
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    margin-bottom: 4px;
+}
+
+div#receipt .item :hover,
+div#receipt .item .name :hover,
+div#receipt .item .quantity :hover,
+div#receipt .item .price :hover {
+    cursor: pointer;
+}
+
+div#receipt .item .quantity {
+    margin-right: 1ex;
+}
+
+div#receipt .item .name {
+    width: 100%;
+}
+
+div#receipt .item .price,
+div#receipt .item .quantity {
+    font-variant-numeric: tabular-nums;
+}
+
+#confirm_or_cancel_container {
+    display: flex;
+    gap: 10px;
+}
+
+#cancel {
+    background-color: #eee;
+}
+
+#confirm {
+    border: 1px solid #eee;
+}
+
+#confirm,
+#cancel {
+    height: 30px;
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+#confirm:hover,
+#cancel:hover {
+    background-color: #2f72dc;
+    color: white;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------*/
+
+div.duties {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+}
+
+.duty {
+    padding: 0.5em;
+    background-color: white;
+}
+
+a:link .duty,
+a:visited .duty {
+    color: #222;
+}
+
+a:hover .duty,
+a:active .duty {
+    color: #579d34;
+}
+
+div.duties a:nth-child(even) .duty {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+div.duties a:nth-child(odd) .duty {
+    background: white;
+}
+
+a:first-child .duty {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 0px;
+}
+
+a:last-child .duty {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 0px;
+}
+
+/* --------------------------------------------------------------------------*/
+
+table td {
+    vertical-align: top;
+    text-align: left;
+    padding: 0.5em 0.8em;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+table {
+    border-collapse: collapse;
+    line-height: 1.2;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 1ex;
+    margin-right: 1ex;
+    width: calc(100% - 2ex);
+    background-color: white;
+}
+
+table.names_and_balances {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+}
+
+table.add-manual-order {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table thead tr {
+    background-color: #222222;
+    color: white;
+    height: 6ex;
+}
+
+table thead tr a {
+    color: white;
+}
+
+table tbody tr {
+    color: #222;
+}
+
+table tbody td {
+    padding-top: 1.5ex;
+    padding-bottom: 1.5ex;
+}
+
+table tbody td.money {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+}
+
+table tbody td.date {
+    font-variant-numeric: tabular-nums;
+}
+
+table thead th.action {
+    width: 20ex;
+}
+
+table thead th.order {
+    min-width: 15ex;
+}
+
+th {
+    font-weight: normal;
+}
+
+.negative_money,
+i.x {
+    color: crimson;
+}
+
+/* ------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+    body {
+        padding-top: 5ex;
+    }
+
+    div.topbutton {
+        font-size: x-large;
+    }
+
+    div.topbar {
+        height: 6.5ex;
+    }
+
+    i.now {
+        top: -8.1ex;
+    }
+}
