@@ -6,7 +6,7 @@ The system enables participants to use custom RFID cards for purchases. Each par
 
 Note: **This system does not support real bank cards**. Only RFID-enabled cards issued for the event can be used for payments.
 
-## Equipment Used
+## Equipment used
 
 Previously tested equipment includes:
 * [Yarongtech 13.56MHz RFID cards](https://www.amazon.co.uk/dp/B01F52VQZ0) or [Hernas 13.56MHz RFID cards](https://www.amazon.co.uk/HERNAS-Rewritable-Mi-Fare-13-56MHz-Control/dp/B09P6DP96X) – approximately £30 for 100 cards
