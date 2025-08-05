@@ -4,7 +4,7 @@ top('index');
 ?>
 <div id='container'>
     <div id='shop_window'>
-        <?
+        <?php
         $sql = "SELECT items.id, items.name, price,
                 item_categories.css_class FROM items
                 LEFT JOIN item_categories ON items.category = item_categories.id
