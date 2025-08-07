@@ -57,7 +57,7 @@ if (isset($_GET['sort']) && $_GET['sort'] == "qty"){
             <tr>
                 <td><?php echo "<div class='category_color " . $row['css_class'] . "'></div><a href='item.php?id=" . $row['id'] . "'>" . $row['name'] . "</a>"; ?></td>
                 <td><?php echo tick_or_cross($row['available']); ?></td>
-                <td><?php echo date("D H:i",strtotime($row['latest_sold'])); ?></td>
+                <td><?php if($row['latest_sold']) {echo date("D H:i",strtotime($row['latest_sold'])); } ?></td>
                 <td><?php echo $best_customer; ?>
                 <td class='money'><?php echo $row['quantity_sold']; ?></td>
                 <td class='money'><?php echo " £" . number_format($row['price'] / 100, 2); ?></td>
